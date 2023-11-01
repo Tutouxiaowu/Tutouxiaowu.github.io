@@ -155,6 +155,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-with与for-else用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/10/31/with%E4%B8%8Efor-else%E7%94%A8%E6%B3%95/">with与for_else用法</a>
+    </h1>
+  
+
+        
+        <a href="/2023/10/31/with%E4%B8%8Efor-else%E7%94%A8%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2023-10-31T14:39:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="with用法"><a href="#with用法" class="headerlink" title="with用法"></a>with用法</h1><h2 id="虽然是基础但是在课堂上，老师对于，with的用法也只是寥寥草草的几个-with-open-下面是对with比较全面的解释-with-一般来说，想要被with调用需要-enter-与-exit-举个栗子-。-with-as-f-f得到什么呢？-是的，as-f，f得到的是enter的返回值"><a href="#虽然是基础但是在课堂上，老师对于，with的用法也只是寥寥草草的几个-with-open-下面是对with比较全面的解释-with-一般来说，想要被with调用需要-enter-与-exit-举个栗子-。-with-as-f-f得到什么呢？-是的，as-f，f得到的是enter的返回值" class="headerlink" title=" 虽然是基础但是在课堂上，老师对于，with的用法也只是寥寥草草的几个 with open. 下面是对with比较全面的解释 with : 一般来说，想要被with调用需要 enter()与 exit() 举个栗子@。@### with as f  f得到什么呢？### 是的，as f，f得到的是enter的返回值"></a> 虽然是基础但是在课堂上，老师对于，with的用法也只是寥寥草草的几个 with open.<br> 下面是对with比较全面的解释<br> with : 一般来说，想要被with调用需要 <strong>enter</strong>()与 <strong>exit</strong>()<br> 举个栗子@。@<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class duixiang:</span><br><span class="line">    def __enter__(self):</span><br><span class="line">        print(&#x27;进入enter方法&#x27;)</span><br><span class="line">        return 6666</span><br><span class="line">    def __exit__(self, exc_type, exc_val, exc_tb):#注意到这几个参数exc_.异常0.o有没有像谐音</span><br><span class="line">        print(&#x27;进入exit方法&#x27;)</span><br><span class="line">    def __zhix__(self):</span><br><span class="line">        print(&quot;执行中&quot;)</span><br><span class="line">        return 8888</span><br><span class="line">    def function():</span><br><span class="line">    return duixiang()</span><br><span class="line">with function():</span><br><span class="line">    print(function().__zhix__())</span><br></pre></td></tr></table></figure><br>### with as f  f得到什么呢？<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with function() as f:</span><br><span class="line">    print(f)#6666</span><br></pre></td></tr></table></figure><br>### 是的，as f，f得到的是enter的返回值</h2><h3 id="ok-说回exit中几个特殊的返回值"><a href="#ok-说回exit中几个特殊的返回值" class="headerlink" title="ok 说回exit中几个特殊的返回值"></a>ok 说回exit中几个特殊的返回值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class duixiang:</span><br><span class="line">    def __enter__(self):</span><br><span class="line">        print(&#x27;进入enter方法&#x27;)</span><br><span class="line">        return self</span><br><span class="line">    def __exit__(self, exc_type, exc_val, exc_tb):#注意到这几个参数exc_.异常0.o有没有像谐音</span><br><span class="line">        print(&#x27;进入exit方法&#x27;)</span><br><span class="line">        print(&#x27;type&#x27;,exc_type)</span><br><span class="line">        print(&#x27;value&#x27;,exc_val)</span><br><span class="line">        print(&#x27;traceback&#x27;,exc_tb)</span><br><span class="line">    def __zhix__(self):</span><br><span class="line">        print(&quot;执行中&quot;)</span><br><span class="line">        return 100/0</span><br><span class="line">def function():</span><br><span class="line">    return duixiang()</span><br><span class="line">with function() as f:</span><br><span class="line">    f.__zhix__()#f：返回的的是对象本身，所以可以调用</span><br><span class="line">#是的得到异常</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="for-else用法"><a href="#for-else用法" class="headerlink" title="for_else用法"></a>for_else用法</h1><p>for_else 没学过吧，我也没学过  &#x3D;。&#x3D;<br>上代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fun1():</span><br><span class="line">   for i in range(1,5):</span><br><span class="line">      print(i)</span><br><span class="line">   else:</span><br><span class="line">      print(&#x27;执行完毕&#x27;)</span><br><span class="line">fun1()#1 2 3 4 执行完毕</span><br></pre></td></tr></table></figure>
+<h2 id="结合contine和break呢"><a href="#结合contine和break呢" class="headerlink" title="结合contine和break呢"></a>结合contine和break呢</h2><h3 id="判断你输入的数，是否有目标值"><a href="#判断你输入的数，是否有目标值" class="headerlink" title="判断你输入的数，是否有目标值"></a>判断你输入的数，是否有目标值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def input_list_int(list_str):#方法1</span><br><span class="line">  list_int = list_str.split(&quot;,&quot;)</span><br><span class="line">  for el in range(len(list_int)):</span><br><span class="line">      list_int[el] = int(list_int[el])#这一操作其实可以：list_int = [int(x) for x in list_str]</span><br><span class="line">  return list_int</span><br><span class="line">x = 10</span><br><span class="line">list_str = input(&quot;请输入整数数组，以,间隔:&quot;)</span><br><span class="line">list = input_list_int(list_str)</span><br><span class="line">for el in list:</span><br><span class="line">    if el == x :</span><br><span class="line">        print(f&quot;哦豁，找到了目标值&#123;el&#125;了&quot;)</span><br><span class="line">        break</span><br><span class="line">else :</span><br><span class="line">    print(&quot;达咩，没有找到目标值哦&quot;)</span><br><span class="line">#类似的也有判断奇数偶数，质数</span><br><span class="line">for i in range(2,10):</span><br><span class="line">    for x in range(2,i):</span><br><span class="line">        if i % x  == 0:</span><br><span class="line">            print(i,&quot;不是质数哦，因为它被本身整除外，还能被这样：&quot;,x,&#x27;*&#x27;,int(i/x))</span><br><span class="line">            break</span><br><span class="line">        else:</span><br><span class="line">            print(i,&#x27;我靠，不管，这tm就是质数&#x27;)</span><br></pre></td></tr></table></figure>
+<h2 id="另外的"><a href="#另外的" class="headerlink" title="另外的"></a>另外的</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">##突然想起，如何输入一个整数列表？</span><br><span class="line">def map_list_int(list_str):#方法2</span><br><span class="line">    list_str1 = list_str.split(&quot;,&quot;)</span><br><span class="line">    list_int = list(map(int,list_str1))#map地图嘛，可以理解为映射，将list_str1中的元素映射到“方法”int中。</span><br><span class="line">    return list_int</span><br><span class="line"># print(input_list_int(list_str))</span><br><span class="line"># str = input(&quot;请输入一个包含若干整数的列表，各整数之间用,分隔：&quot;)</span><br><span class="line"># int_list = eval(&quot;[&quot; + str + &quot;]&quot;)</span><br><span class="line"># print(int_list)</span><br><span class="line">#说到eval():1.将字符串当成有效的表达式来求值，并返回计算结果2.将字符串转换为字典或者列表</span><br><span class="line">#就像下面一样：print(eval(&quot;1+1&quot;))#2</span><br><span class="line"># print(eval(&quot;&#x27;@&#x27;*5&quot;))#@@@@@</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/10/31/with%E4%B8%8Efor-else%E7%94%A8%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ChatGPT" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -189,10 +267,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ChatGPT</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -268,11 +342,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Git操作</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Git操作</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -405,15 +479,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ChatGPT</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
