@@ -16,7 +16,7 @@
 <meta property="og:description" content="Git的基本操作cmd基本1234mkdir 你的目录名  --&gt;创建目录cd 进入目录可以在任意目录下进行Open Git Bash here操作ll -a (windows)可以查看目录下的内容">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-29T09:09:00.000Z">
-<meta property="article:modified_time" content="2023-11-01T02:13:47.224Z">
+<meta property="article:modified_time" content="2023-11-14T14:13:20.651Z">
 <meta property="article:author" content="pika_noeat">
 <meta property="article:tag" content="Git操作">
 <meta property="article:tag" content="随笔">
@@ -195,7 +195,7 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 分支暂存</span><br><span class="line">$ git stash暂存</span><br><span class="line">$ git  stash apply 回复暂存的东西</span><br><span class="line">$ git stash list 暂存列表</span><br></pre></td></tr></table></figure>
 
-<h3 id="Git与GitHub操作"><a href="#Git与GitHub操作" class="headerlink" title="Git与GitHub操作"></a>Git与GitHub操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ssh 拉取GitHub上面的内容</span><br><span class="line">$ git push origin master push到GitHub上以更新</span><br><span class="line">$ git pull origin main 从origin main 分支上获取最新代码（github上为main 本地为master)</span><br><span class="line">$ git remote add origin https://github.com/lr998/mysrt.git 将自己的文件添加到github上面</span><br></pre></td></tr></table></figure>
+<h3 id="Git与GitHub操作"><a href="#Git与GitHub操作" class="headerlink" title="Git与GitHub操作"></a>Git与GitHub操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ssh 拉取GitHub上面的内容</span><br><span class="line">$ git push -u origin master push到GitHub上以更新</span><br><span class="line">$ git pull origin main 从origin main 分支上获取最新代码（github上为main 本地为master）</span><br><span class="line">$ git remote add origin https://github.com/lr998/mysrt.git 将自己的文件添加到github上面</span><br><span class="line">更新远程仓库到本地：</span><br><span class="line">$ git fetch origin main</span><br><span class="line">$ git merge origin main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
