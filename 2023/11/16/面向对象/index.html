@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/11 | pika_noeat</title>
+  <title>面向对象 | pika_noeat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一个新手的博客，主要涉及到Python学习，个人提升.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pika_noeat">
-<meta property="og:url" content="http://example.com/archives/2023/11/index.html">
+  <meta name="description" content="python中的面向对象是和java相似的类——即结构体对象的创建和调用如下所示：  123456789101112131415class Person:   style &#x3D; &amp;#x27;i人&amp;#x27; # 共有变量，都有的变量   def __init__(self,name,age): #构造方法初始化——&gt;构造方法只能有一个       self.name &#x3D; name">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://example.com/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="pika_noeat">
-<meta property="og:description" content="这是一个新手的博客，主要涉及到Python学习，个人提升.">
+<meta property="og:description" content="python中的面向对象是和java相似的类——即结构体对象的创建和调用如下所示：  123456789101112131415class Person:   style &#x3D; &amp;#x27;i人&amp;#x27; # 共有变量，都有的变量   def __init__(self,name,age): #构造方法初始化——&gt;构造方法只能有一个       self.name &#x3D; name">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-16T11:07:40.000Z">
+<meta property="article:modified_time" content="2023-11-16T12:37:12.063Z">
 <meta property="article:author" content="pika_noeat">
-<meta property="article:tag" content="Python，pika_noeat">
+<meta property="article:tag" content="python基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="pika_noeat" type="application/atom+xml">
@@ -153,36 +155,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-面向对象" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      面向对象
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+
+        
+        <a href="/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
   	<time datetime="2023-11-16T11:07:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>python中的面向对象是和java相似的<br>类——即结构体<br>对象的创建和调用如下所示：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">   style = &#x27;i人&#x27; # 共有变量，都有的变量</span><br><span class="line">   def __init__(self,name,age): #构造方法初始化——&gt;构造方法只能有一个</span><br><span class="line">       self.name = name</span><br><span class="line">       self.age = age</span><br><span class="line">   #  OK 定义了这个人，他会干嘛，他拿来干嘛的</span><br><span class="line">   def say(self):</span><br><span class="line">       print(&#x27;caoxiaohua：我尊嘟栓q&#x27;)</span><br><span class="line">   def play(self):</span><br><span class="line">       print(&quot;timing,我爱玩王者荣耀&quot;)</span><br><span class="line">caoxiaohua = Person(&#x27;CAOXIAOHUA&#x27;,&#x27;19&#x27;)</span><br><span class="line">print(caoxiaohua.name)</span><br><span class="line">print(caoxiaohua.age)</span><br><span class="line">print(caoxiaohua.style)</span><br><span class="line">caoxiaohua.say()</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>另外，python是支持多继承的，关于继承的代码如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class YellowPeople(Person): # 继承于person</span><br><span class="line">    # def __init__(self,name,age):</span><br><span class="line">    #     super.__init__(self,name,age)</span><br><span class="line">    #     Person.__init__(self,name,age)</span><br><span class="line">    def say(self):</span><br><span class="line">        print(&#x27;吴超，我是真滴帅&#x27;)</span><br><span class="line"># 此时 yellowpeople可以调用其构造方法和其他方法</span><br><span class="line">wuchao = YellowPeople(&#x27;WUCHAO&#x27;,20)</span><br><span class="line">print(wuchao.age)</span><br><span class="line">print(wuchao.name)</span><br><span class="line">wuchao.say()</span><br><span class="line">#### 对象多继承（java是不支持多继承的，因为会很复杂，但是java提供接口，以解决多继承的问题）</span><br><span class="line">class PersonFather(Person):</span><br><span class="line">    def say(self):</span><br><span class="line">        print(&quot;父类：曹小华666&quot;)</span><br><span class="line">class PersonMother(Person):</span><br><span class="line">    def say(self):</span><br><span class="line">        print(&quot;Mother&gt;曹小华66666&quot;)</span><br><span class="line">class caoxiaohua(PersonMother,PersonFather): #当方法相同时，先调用前面的，最后调用的是爷类</span><br><span class="line">    pass</span><br><span class="line">caohua = caoxiaohua(&#x27;c&#x27;,19)</span><br><span class="line">caohua.say()</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,171 +223,116 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/11/16/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2023-11-16T10:33:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/11/16/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文件操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/11/16/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/11/16/%E5%BC%82%E5%B8%B8/" class="archive-article-date">
-  	<time datetime="2023-11-16T10:19:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/11/16/%E5%BC%82%E5%B8%B8/">异常</a>
-    </h1>
+  <div id="SOHUCS" sid="面向对象" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cywXbo3hx",
+        conf: "a5c4e16fa4361f6fa5d02061006e26cf"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/11/15/%E5%8F%98%E9%87%8F/" class="archive-article-date">
-  	<time datetime="2023-11-15T14:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/11/15/%E5%8F%98%E9%87%8F/">变量</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/11/15/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2023-11-15T10:37:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/11/15/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">列表基础_数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -381,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

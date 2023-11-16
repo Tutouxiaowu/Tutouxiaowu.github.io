@@ -155,6 +155,160 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+    </h1>
+  
+
+        
+        <a href="/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+  	<time datetime="2023-11-16T11:07:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>python中的面向对象是和java相似的<br>类——即结构体<br>对象的创建和调用如下所示：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">   style = &#x27;i人&#x27; # 共有变量，都有的变量</span><br><span class="line">   def __init__(self,name,age): #构造方法初始化——&gt;构造方法只能有一个</span><br><span class="line">       self.name = name</span><br><span class="line">       self.age = age</span><br><span class="line">   #  OK 定义了这个人，他会干嘛，他拿来干嘛的</span><br><span class="line">   def say(self):</span><br><span class="line">       print(&#x27;caoxiaohua：我尊嘟栓q&#x27;)</span><br><span class="line">   def play(self):</span><br><span class="line">       print(&quot;timing,我爱玩王者荣耀&quot;)</span><br><span class="line">caoxiaohua = Person(&#x27;CAOXIAOHUA&#x27;,&#x27;19&#x27;)</span><br><span class="line">print(caoxiaohua.name)</span><br><span class="line">print(caoxiaohua.age)</span><br><span class="line">print(caoxiaohua.style)</span><br><span class="line">caoxiaohua.say()</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>另外，python是支持多继承的，关于继承的代码如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class YellowPeople(Person): # 继承于person</span><br><span class="line">    # def __init__(self,name,age):</span><br><span class="line">    #     super.__init__(self,name,age)</span><br><span class="line">    #     Person.__init__(self,name,age)</span><br><span class="line">    def say(self):</span><br><span class="line">        print(&#x27;吴超，我是真滴帅&#x27;)</span><br><span class="line"># 此时 yellowpeople可以调用其构造方法和其他方法</span><br><span class="line">wuchao = YellowPeople(&#x27;WUCHAO&#x27;,20)</span><br><span class="line">print(wuchao.age)</span><br><span class="line">print(wuchao.name)</span><br><span class="line">wuchao.say()</span><br><span class="line">#### 对象多继承（java是不支持多继承的，因为会很复杂，但是java提供接口，以解决多继承的问题）</span><br><span class="line">class PersonFather(Person):</span><br><span class="line">    def say(self):</span><br><span class="line">        print(&quot;父类：曹小华666&quot;)</span><br><span class="line">class PersonMother(Person):</span><br><span class="line">    def say(self):</span><br><span class="line">        print(&quot;Mother&gt;曹小华66666&quot;)</span><br><span class="line">class caoxiaohua(PersonMother,PersonFather): #当方法相同时，先调用前面的，最后调用的是爷类</span><br><span class="line">    pass</span><br><span class="line">caohua = caoxiaohua(&#x27;c&#x27;,19)</span><br><span class="line">caohua.say()</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/11/16/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-文件操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/11/16/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a>
+    </h1>
+  
+
+        
+        <a href="/2023/11/16/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2023-11-16T10:33:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 创建目录</span><br><span class="line"># os.mkdir(&quot;新建&quot;)</span><br><span class="line"># # 修改目录</span><br><span class="line"># os.rename(&quot;新建&quot;,&quot;入门基础&quot;)</span><br><span class="line"># 删除目录 os.rmdir</span><br><span class="line"></span><br><span class="line"># 文件</span><br><span class="line">with open(&quot;&quot;,&#x27;w&#x27;,encoding = &#x27;utf-8&#x27;) as f:</span><br><span class="line">  f.write()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/11/16/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-异常" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -175,6 +329,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><blockquote>
+<p>代码如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">  with open(&#x27;caoxiaohua.txt&#x27;) as f:</span><br><span class="line">    f.read()</span><br><span class="line">except FileNotFoundError as err ： # 这里的异常可以定义多个，且可用超类Exception</span><br><span class="line">   print(&#x27;文件不存在&#x27;)</span><br><span class="line">else：</span><br><span class="line">   print(&quot;没有问题，文件已存在&quot;)</span><br><span class="line">finally:</span><br><span class="line">   print(&#x27;最后一定会做的事情&#x27;)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2023/11/16/%E5%BC%82%E5%B8%B8/#more">more >></a>
         
       
 
@@ -183,6 +343,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -619,11 +790,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
               </li>
              
               <li class="article-tag-list-item">
